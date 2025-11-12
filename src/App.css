@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sold {
+    color: #31A088;
+    border: #31A088 solid 1px;
+    background-color: #EBF9F6;
+}
+
+.bought {
+    color: #2762AA;
+    border: #2762AA solid 1px;
+    background-color: #EAF1FA;
+}
+
+.to-be-sold {
+    color: #C12410;
+    border: #C12410 solid 1px;
+    background-color: #FDEAE7;
+}
