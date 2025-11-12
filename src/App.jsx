@@ -1,8 +1,13 @@
 import './App.css';
+import './helpers/sold.js'
 
 function App() {
-  return (
-    <h1>Begin hier met met maken van de applicatie!</h1>
+
+    return (
+      <>
+        <h1>Verkoopoverzicht</h1>
+        <h2>Aantal verkochte producten</h2>
+      </>
   )
 }
 
