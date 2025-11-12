@@ -3,11 +3,11 @@
 
 import {bestSellingTv, inventory} from "../constants/inventory.js";
 
-function boughtTv() {
+function boughtTv(productArray) {
     let sumBought = 0;
 
-    for (let i = 0; i < inventory.length; i++) {
-        sumBought += inventory[i].originalStock;
+    for (let i = 0; i < productArray.length; i++) {
+        sumBought += productArray[i].originalStock;
     }
      sumBought += bestSellingTv.originalStock;
 

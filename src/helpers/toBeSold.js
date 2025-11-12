@@ -4,8 +4,8 @@
 import boughtTv from "./boughtTv.js";
 import soldTv from "./soldTv.js";
 
-function toBeSold(a, b) {
-    return boughtTv() - soldTv();
+function toBeSold(productArray) {
+    return boughtTv(productArray) - soldTv(productArray);
 }
 
 export default toBeSold;

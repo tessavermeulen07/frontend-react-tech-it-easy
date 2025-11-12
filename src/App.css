@@ -21,3 +21,8 @@
     border: #C12410 solid 1px;
     background-color: #FDEAE7;
 }
+
+.icon {
+    width: 15px;
+    height: 15px;
+}
