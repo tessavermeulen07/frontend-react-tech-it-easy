@@ -19,36 +19,43 @@ function App() {
     return (
 
         <>
-            <h1>Tech it easy dashboard</h1>
+            <div className="main-container">
+                <div className="header-container">
+                    <h1>Tech it easy dashboard</h1>
+                </div>
+                <h2>Verkoopoverzicht</h2>
+                <div className="sold-container">
+                    <article className="sold article-container">
+                        <h3>Aantal verkochte producten</h3>
+                        <p className="numbers">{soldTv(inventory)}</p>
+                    </article>
+                    <article className="bought article-container">
+                        <h3>Aantal ingekochte producten</h3>
+                        <p className="numbers">{boughtTv(inventory)}</p>
+                    </article>
+                    <article className="to-be-sold article-container">
+                        <h3>Aantal te verkopen producten</h3>
+                        <p className="numbers">{toBeSold(inventory)}</p>
+                    </article>
+                </div>
 
-            <h2>Verkoopoverzicht</h2>
-            <article className="sold">
-                <h3>Aantal verkochte producten</h3>
-                <p>{soldTv(inventory)}</p>
-            </article>
-            <article className="bought">
-                <h3>Aantal ingekochte producten</h3>
-                <p>{boughtTv(inventory)}</p>
-            </article>
-            <article className="to-be-sold">
-                <h3>Aantal te verkopen producten</h3>
-                <p>{toBeSold(inventory)}</p>
-            </article>
+                <h2>Best verkochte tv</h2>
+                <img src={samsung} alt="Samsung TV bestverkocht"/>
+                <h3>{bestSoldTv(bestSellingTv)}</h3>
+                <p>{bestSoldTvPrice(bestSellingTv)}</p>
+                <p>{bestSoldTvSize(bestSellingTv)}</p>
+                <p><img src={check} alt="check icon" className="icon"/> wifi
+                    <img src={check} alt="check icon" className="icon"/> speech
+                    <img src={check} alt="check icon" className="icon"/> hdr
+                    <img src={check} alt="check icon" className="icon"/> bluetooth
+                    <img src={minus} alt="check icon" className="icon"/> ambilight</p>
 
-            <h2>Best verkochte tv</h2>
-            <img src={samsung} alt="Samsung TV bestverkocht" />
-            <h3>{bestSoldTv(bestSellingTv)}</h3>
-            <p>{bestSoldTvPrice()}</p>
-            <p>{bestSoldTvSize(bestSellingTv)}</p>
-            <p><img src={check} alt="check icon" className="icon" /> wifi
-                <img src={check} alt="check icon" className="icon" />  speech
-                <img src={check} alt="check icon" className="icon" /> hdr
-                <img src={check} alt="check icon" className="icon" /> bluetooth
-                <img src={minus} alt="check icon" className="icon" /> ambilight</p>
-
-            <button type="button" onClick={() => handleClick("Meest verkocht eerst")}>Meest verkocht eerst</button>
-            <button type="button" onClick={() => handleClick("Goedkoopste eerst")}>Goedkoopste eerst</button>
-            <button type="button" onClick={() => handleClick("Meest geschikt voor sport eerst")}>Meest geschikt voor sport eerst</button>
+                <button type="button" onClick={() => handleClick("Meest verkocht eerst")}>Meest verkocht eerst</button>
+                <button type="button" onClick={() => handleClick("Goedkoopste eerst")}>Goedkoopste eerst</button>
+                <button type="button" onClick={() => handleClick("Meest geschikt voor sport eerst")}>Meest geschikt voor
+                    sport eerst
+                </button>
+            </div>
         </>
     )
 }
