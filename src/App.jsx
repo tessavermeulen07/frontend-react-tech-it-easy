@@ -24,7 +24,7 @@ function App() {
                     <h1>Tech it easy dashboard</h1>
                 </div>
                 <h2>Verkoopoverzicht</h2>
-                <div className="sold-container">
+                <div className="tv-container">
                     <article className="sold article-container">
                         <h3>Aantal verkochte producten</h3>
                         <p className="numbers">{soldTv(inventory)}</p>
@@ -40,15 +40,21 @@ function App() {
                 </div>
 
                 <h2>Best verkochte tv</h2>
-                <img src={samsung} alt="Samsung TV bestverkocht"/>
-                <h3>{bestSoldTv(bestSellingTv)}</h3>
-                <p>{bestSoldTvPrice(bestSellingTv)}</p>
-                <p>{bestSoldTvSize(bestSellingTv)}</p>
-                <p><img src={check} alt="check icon" className="icon"/> wifi
-                    <img src={check} alt="check icon" className="icon"/> speech
-                    <img src={check} alt="check icon" className="icon"/> hdr
-                    <img src={check} alt="check icon" className="icon"/> bluetooth
-                    <img src={minus} alt="check icon" className="icon"/> ambilight</p>
+                <div className="most-sold">
+                    <div className="image-most-sold">
+                        <img src={samsung} alt="Samsung TV bestverkocht"/>
+                    </div>
+                    <div className="most-sold-info">
+                        <h3>{bestSoldTv(bestSellingTv)}</h3>
+                        <p className="numbers">{bestSoldTvPrice(bestSellingTv)}</p>
+                        <p>{bestSoldTvSize(bestSellingTv)}</p>
+                        <p><img src={check} alt="check icon" className="icon"/> wifi
+                            <img src={check} alt="check icon" className="icon"/> speech
+                            <img src={check} alt="check icon" className="icon"/> hdr
+                            <img src={check} alt="check icon" className="icon"/> bluetooth
+                            <img src={minus} alt="check icon" className="icon"/> ambilight</p>
+                    </div>
+                </div>
 
                 <button type="button" onClick={() => handleClick("Meest verkocht eerst")}>Meest verkocht eerst</button>
                 <button type="button" onClick={() => handleClick("Goedkoopste eerst")}>Goedkoopste eerst</button>
