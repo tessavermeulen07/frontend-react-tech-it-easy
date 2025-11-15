@@ -139,3 +139,24 @@ h3 {
     width: 15px;
     height: 15px;
 }
+
+.extras-best-sold-tv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 10px;
+}
+
+button {
+    width: auto;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 20px;
+}

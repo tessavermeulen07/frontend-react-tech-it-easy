@@ -48,19 +48,22 @@ function App() {
                         <h3>{bestSoldTv(bestSellingTv)}</h3>
                         <p className="numbers">{bestSoldTvPrice(bestSellingTv)}</p>
                         <p>{bestSoldTvSize(bestSellingTv)}</p>
-                        <p><img src={check} alt="check icon" className="icon"/> wifi
+                        <div className="extras-best-sold-tv">
+                            <img src={check} alt="check icon" className="icon"/> wifi
                             <img src={check} alt="check icon" className="icon"/> speech
                             <img src={check} alt="check icon" className="icon"/> hdr
                             <img src={check} alt="check icon" className="icon"/> bluetooth
-                            <img src={minus} alt="check icon" className="icon"/> ambilight</p>
+                            <img src={minus} alt="check icon" className="icon"/> ambilight
+                        </div>
                     </div>
                 </div>
-
-                <button type="button" onClick={() => handleClick("Meest verkocht eerst")}>Meest verkocht eerst</button>
-                <button type="button" onClick={() => handleClick("Goedkoopste eerst")}>Goedkoopste eerst</button>
-                <button type="button" onClick={() => handleClick("Meest geschikt voor sport eerst")}>Meest geschikt voor
-                    sport eerst
-                </button>
+                <div className="button">
+                    <button type="button" onClick={() => handleClick("Meest verkocht eerst")}>Meest verkocht eerst
+                    </button>
+                    <button type="button" onClick={() => handleClick("Goedkoopste eerst")}>Goedkoopste eerst</button>
+                    <button type="button" onClick={() => handleClick("Meest geschikt voor sport eerst")}>
+                        Meest geschikt voor sport eerst </button>
+                </div>
             </div>
         </>
     )
