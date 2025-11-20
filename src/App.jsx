@@ -10,11 +10,24 @@ import samsung from "./assets/samsung.jpeg";
 import check from "./assets/check.png";
 import minus from "./assets/minus.png";
 
+
 function App() {
 
     function handleClick(message) {
         console.log(message);
     }
+
+
+// Deel 2 van Tech it Easy
+//     {
+//         showOutcomeInConsole();
+//
+//     }
+
+    // const tvOptions = inventory.map((tvOption) => {
+    //    );
+    // });
+    // console.log(tvOptions);
 
     return (
 
@@ -53,7 +66,7 @@ function App() {
                             <img src={check} alt="check icon" className="icon"/> speech
                             <img src={check} alt="check icon" className="icon"/> hdr
                             <img src={check} alt="check icon" className="icon"/> bluetooth
-                            <img src={minus} alt="check icon" className="icon"/> ambilight
+                            <img src={minus} alt="minus icon" className="icon"/> ambilight
                         </div>
                     </div>
                 </div>
@@ -62,9 +75,32 @@ function App() {
                     </button>
                     <button type="button" onClick={() => handleClick("Goedkoopste eerst")}>Goedkoopste eerst</button>
                     <button type="button" onClick={() => handleClick("Meest geschikt voor sport eerst")}>
-                        Meest geschikt voor sport eerst </button>
+                        Meest geschikt voor sport eerst
+                    </button>
                 </div>
+                <div>
+                    <ul>
+                        {inventory.map((tv) => {
+                            return <li key={tv} className="most-sold-info most-sold">
+                                <h3>{bestSoldTv(tv)}</h3>
+                                <p className="numbers">{bestSoldTvPrice(tv)}</p>
+                                <p>{bestSoldTvSize(tv)}</p>
+
+                                <ol>
+                                    {tv.options.map((option) => {
+                                        return <li>{option.name}</li>
+                                        }
+                                    )}
+                                </ol>
+
+                            </li>
+                        })}
+                    </ul>
+                </div>
+
             </div>
+
+
         </>
     )
 }

@@ -10,10 +10,19 @@
 import inchesToCm from "./inchToCm.js";
 
 function bestSoldTvSize(product) {
-    return `${product.availableSizes[0]} inch (${inchesToCm(product.availableSizes[0])} cm) |
-    ${product.availableSizes[1]} inch (${inchesToCm(product.availableSizes[1])} cm) |
-    ${product.availableSizes[2]} inch (${inchesToCm(product.availableSizes[2])} cm) |
-    ${product.availableSizes[3]} inch (${inchesToCm(product.availableSizes[3])} cm)`;
+    let tvSizes = '';
+    for (let i = 0; i < product.availableSizes.length; i++) {
+        tvSizes += `${product.availableSizes[i]} inch (${inchesToCm(product.availableSizes[i])} cm)`
+        if(i < product.availableSizes.length -1) {
+            tvSizes = tvSizes + ' | '
+        }
+    }
+    return tvSizes;
+
+    //     return `${product.availableSizes[0]} inch (${inchesToCm(product.availableSizes[0])} cm) |
+    // ${product.availableSizes[1]} inch (${inchesToCm(product.availableSizes[1])} cm) |
+    // ${product.availableSizes[2]} inch (${inchesToCm(product.availableSizes[2])} cm) |
+    // ${product.availableSizes[3]} inch (${inchesToCm(product.availableSizes[3])} cm)`;
 }
 
 export default bestSoldTvSize;
