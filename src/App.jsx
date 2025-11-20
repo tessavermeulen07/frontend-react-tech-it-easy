@@ -81,14 +81,18 @@ function App() {
                 <div>
                     <ul>
                         {inventory.map((tv) => {
-                            return <li key={tv} className="most-sold-info most-sold">
+                            return <li key={tv.type} className="most-sold-info most-sold">
                                 <h3>{bestSoldTv(tv)}</h3>
                                 <p className="numbers">{bestSoldTvPrice(tv)}</p>
                                 <p>{bestSoldTvSize(tv)}</p>
 
                                 <ol>
                                     {tv.options.map((option) => {
-                                        return <li>{option.name}</li>
+                                        if (option.applicable === true) {
+                                            return <li key={option.name}><img src={check} alt="check icon" className="icon"/> {option.name}</li>
+                                    } else {
+                                            return <li key={option.name}><img src={minus} alt="check icon" className="icon"/> {option.name}</li>
+                                        }
                                         }
                                     )}
                                 </ol>
