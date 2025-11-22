@@ -11,16 +11,17 @@ import check from "./assets/check.png";
 import minus from "./assets/minus.png";
 
 
+
 function App() {
 
-    
-    function sortingLists (sortingList) {
+
+    function sortingLists(sortingList) {
         const copyInventory = [...inventory]
-        if(sortingList === "mostSold") {
-            return copyInventory.sort((a,b) => b.sold - a.sold);
-        } else if(sortingList === "price") {
+        if (sortingList === "mostSold") {
+            return copyInventory.sort((a, b) => b.sold - a.sold);
+        } else if (sortingList === "price") {
             return copyInventory.sort((a, b) => a.price - b.price);
-        } else if(sortingList === "sport") {
+        } else if (sortingList === "sport") {
             return copyInventory.sort((a, b) => b.refreshRate - a.refreshRate);
         }
     }
@@ -66,7 +67,7 @@ function App() {
                 </div>
 
                 <h2>Best verkochte tv</h2>
-                <div className="most-sold">
+                <div className="container-sold most-sold">
                     <div className="image-most-sold">
                         <img src={samsung} alt="Samsung TV bestverkocht"/>
                     </div>
@@ -91,30 +92,34 @@ function App() {
                         Meest geschikt voor sport eerst
                     </button>
                 </div>
-                <div>
+
+                <div className="container-sold">
                     <ul>
                         {inventory.map((tv) => {
-                            return <li key={tv.type} className="most-sold-info most-sold">
+                            return <li key={tv.type} className="most-sold">
+                                <img src={tv.image} alt={`Afbeelding van ${tv.name}`} className="image-most-sold"/>
+                                <div className="most-sold-info">
                                 <h3>{bestSoldTv(tv)}</h3>
                                 <p className="numbers">{bestSoldTvPrice(tv)}</p>
                                 <p>{bestSoldTvSize(tv)}</p>
 
-                                <ol>
+                                <ol className="list-box">
                                     {tv.options.map((option) => {
-                                        if (option.applicable === true) {
-                                            return <li key={option.name}><img src={check} alt="check icon" className="icon"/> {option.name}</li>
-                                    } else {
-                                            return <li key={option.name}><img src={minus} alt="check icon" className="icon"/> {option.name}</li>
-                                        }
+                                            if (option.applicable === true) {
+                                                return <li key={option.name}><img src={check} alt="check icon"
+                                                                                  className="icon"/> {option.name}</li>
+                                            } else {
+                                                return <li key={option.name}><img src={minus} alt="check icon"
+                                                                                  className="icon"/> {option.name}</li>
+                                            }
                                         }
                                     )}
                                 </ol>
-
+                                </div>
                             </li>
                         })}
                     </ul>
                 </div>
-
             </div>
 
 

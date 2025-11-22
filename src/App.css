@@ -96,6 +96,18 @@ h3 {
     background-color: #FDEAE7;
 }
 
+.container-sold {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 50px 0;
+    gap: 50px;
+    flex-wrap: wrap;
+    /*border: 1px dashed #464747;*/
+    /*background-color: #DBDCDC;*/
+}
+
 .most-sold {
     display: flex;
     flex-direction: row;
@@ -133,6 +145,21 @@ h3 {
     margin: 0 0 50px 0;
     padding: 0;
     gap: 30px;
+}
+
+ol {
+    list-style: none;
+
+}
+
+.list-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    flex-grow: 0;
+    gap: 10px;
+
 }
 
 .icon {
