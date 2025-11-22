@@ -13,8 +13,21 @@ import minus from "./assets/minus.png";
 
 function App() {
 
-    function handleClick(message) {
-        console.log(message);
+    
+    function sortingLists (sortingList) {
+        const copyInventory = [...inventory]
+        if(sortingList === "mostSold") {
+            return copyInventory.sort((a,b) => b.sold - a.sold);
+        } else if(sortingList === "price") {
+            return copyInventory.sort((a, b) => a.price - b.price);
+        } else if(sortingList === "sport") {
+            return copyInventory.sort((a, b) => b.refreshRate - a.refreshRate);
+        }
+    }
+
+
+    function handleClick(sort) {
+        console.log(sort);
     }
 
 
@@ -71,10 +84,10 @@ function App() {
                     </div>
                 </div>
                 <div className="button">
-                    <button type="button" onClick={() => handleClick("Meest verkocht eerst")}>Meest verkocht eerst
+                    <button type="button" onClick={() => handleClick(sortingLists("mostSold"))}>Meest verkocht eerst
                     </button>
-                    <button type="button" onClick={() => handleClick("Goedkoopste eerst")}>Goedkoopste eerst</button>
-                    <button type="button" onClick={() => handleClick("Meest geschikt voor sport eerst")}>
+                    <button type="button" onClick={() => handleClick(sortingLists("price"))}>Goedkoopste eerst</button>
+                    <button type="button" onClick={() => handleClick(sortingLists("sport"))}>
                         Meest geschikt voor sport eerst
                     </button>
                 </div>
