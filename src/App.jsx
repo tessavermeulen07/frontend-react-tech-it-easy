@@ -6,7 +6,6 @@ import bestSoldTv from "./helpers/bestSoldTv.js";
 import bestSoldTvPrice from "./helpers/bestSoldTvPrice.js";
 import bestSoldTvSize from "./helpers/bestSoldTvSize.js";
 import {bestSellingTv, inventory} from "./constants/inventory.js";
-import samsung from "./assets/samsung.jpeg";
 import check from "./assets/check.png";
 import minus from "./assets/minus.png";
 
@@ -69,7 +68,7 @@ function App() {
                 <h2>Best verkochte tv</h2>
                 <div className="container-sold most-sold">
                     <div className="image-most-sold">
-                        <img src={samsung} alt="Samsung TV bestverkocht"/>
+                        <img src={bestSellingTv.sourceImg} alt="Samsung TV bestverkocht"/>
                     </div>
                     <div className="most-sold-info">
                         <h3>{bestSoldTv(bestSellingTv)}</h3>
@@ -96,8 +95,8 @@ function App() {
                 <div className="container-sold">
                     <ul>
                         {inventory.map((tv) => {
-                            return <li key={tv.type} className="most-sold">
-                                <img src={tv.image} alt={`Afbeelding van ${tv.name}`} className="image-most-sold"/>
+                            return <li key={tv.type} className="most-sold image-most-sold">
+                                <img src={tv.sourceImg} alt={`Afbeelding van ${tv.name}`}/>
                                 <div className="most-sold-info">
                                 <h3>{bestSoldTv(tv)}</h3>
                                 <p className="numbers">{bestSoldTvPrice(tv)}</p>

@@ -159,7 +159,6 @@ ol {
     flex-shrink: 0;
     flex-grow: 0;
     gap: 10px;
-
 }
 
 .icon {
@@ -178,13 +177,24 @@ ol {
 
 button {
     width: auto;
+    height: 50px;
     padding: 5px 10px;
     text-align: center;
+    color: #FFFFFF;
+    background-color: #2762AA;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 5px lightgray;;
+
 }
 
 .button {
     display: flex;
     flex-direction: row;
-    align-content: center;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 0 0 50px 0;
 }
