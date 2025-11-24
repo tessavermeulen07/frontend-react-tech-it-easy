@@ -25,22 +25,9 @@ function App() {
         }
     }
 
-
     function handleClick(sort) {
         console.log(sort);
     }
-
-
-// Deel 2 van Tech it Easy
-//     {
-//         showOutcomeInConsole();
-//
-//     }
-
-    // const tvOptions = inventory.map((tvOption) => {
-    //    );
-    // });
-    // console.log(tvOptions);
 
     return (
 
@@ -120,8 +107,6 @@ function App() {
                     </ul>
                 </div>
             </div>
-
-
         </>
     )
 }
