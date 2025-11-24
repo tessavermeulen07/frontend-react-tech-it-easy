@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+.numbers {
+    font-size: 45px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding: 50px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tv-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+    flex-basis: 350px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    text-align: center;
+}
+
+.sold {
+    color: #31A088;
+    border: #31A088 solid 1px;
+    background-color: #EBF9F6;
+}
+
+.bought {
+    color: #2762AA;
+    border: #2762AA solid 1px;
+    background-color: #EAF1FA;
+}
+
+.to-be-sold {
+    color: #C12410;
+    border: #C12410 solid 1px;
+    background-color: #FDEAE7;
+}
+
+.container-sold {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 50px 0;
+    gap: 50px;
+    flex-wrap: wrap;
+    /*border: 1px dashed #464747;*/
+    /*background-color: #DBDCDC;*/
+}
+
+.most-sold {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 0 50px 0;
+    padding: 50px;
+    gap: 50px;
+    flex-wrap: wrap;
+    border: 1px dashed #464747;
+    background-color: #DBDCDC;
+}
+
+.image-most-sold {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 300px;
+}
+
+.image-most-sold img {
+    max-width: 300px;
+    height: auto;
+}
+
+.most-sold-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    margin: 0 0 50px 0;
+    padding: 0;
+    gap: 30px;
+}
+
+ol {
+    list-style: none;
+
+}
+
+.list-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    flex-grow: 0;
+    gap: 10px;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+}
+
+.extras-best-sold-tv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    width: auto;
+    height: 50px;
+    padding: 5px 10px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #2762AA;
+    font-family: inherit;
+    font-size: inherit;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 5px lightgray;;
+
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin: 0 0 50px 0;
+}
